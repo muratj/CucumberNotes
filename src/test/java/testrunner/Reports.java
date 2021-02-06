@@ -9,9 +9,10 @@ import org.junit.runner.RunWith;
         features = {"src/test/java/features/example.feature"},
         glue = {"steps"},
         plugin = {"pretty",
-                "json:target/test-reports/report.json",
-                "junit:target/test-reports/report.xml"
-        }
+//                "json:target/test-reports/report.json",
+//                "junit:target/test-reports/report.xml"
+        },
+        publish = true
 )
 
 public class Reports {

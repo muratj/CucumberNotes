@@ -22,6 +22,15 @@ public class HooksPractice {
     public void tearDown2() {
         System.out.println("after2 method");
     }
+    @BeforeStep
+    public void screenshot() {
+        System.out.println("Screenshot before every step");
+    }
+    @AfterStep
+    public void reload() {
+        System.out.println("Reload after every step");
+    }
+
 
 
 

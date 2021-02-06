@@ -5,28 +5,28 @@ import io.cucumber.java.en.*;
 
 public class HooksPractice {
 
-    @Before("@Tag")
+    @Before("@Hook and @Tag")
     public void setup(Scenario sc) {
         System.out.println("before method");
         System.out.println(sc.getName());
     }
-    @Before
+    @Before("@Hook")
     public void setup2() {
         System.out.println("before2 method");
     }
-    @After(order = 1)
+    @After("@Hook")
     public void tearDown() {
         System.out.println("after method");
     }
-    @After(order = 2)
+    @After("@Hook")
     public void tearDown2() {
         System.out.println("after2 method");
     }
-    @BeforeStep
+    @BeforeStep("@Hook")
     public void screenshot() {
         System.out.println("Screenshot before every step");
     }
-    @AfterStep
+    @AfterStep("@Hook")
     public void reload() {
         System.out.println("Reload after every step");
     }
